@@ -124,5 +124,20 @@ A a = new B ()
 1. 因为它是奇数。偶数相当与×2进行左移，当乘法溢出时，后位补的都是零，造成信息丢失，导致hashcode一样的概率变大，而奇数有意让hash值最大程度散布，降低碰撞可能。
 2. 因为它可以简化为(x<<5)-x for better performance。
 
+## 拷贝clone
 
+### 浅拷贝shallow clone
+
+```java
+shallowExp e1 = new shallowCloneExp();
+shallowExp e2 = null;
+e1.set(2,222);//给这个array的index=2的元素赋值222
+System.out.printIn(e2.get(2));//222
+```
+
+浅拷贝是对象和原始对象的引用类型引用同一个对象。
+
+### 深拷贝deep clone
+
+深拷贝是对象和原始对象的引用类型引用不同对象。
 
